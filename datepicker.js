@@ -35,15 +35,20 @@ define( [
 					//console.log(date.toLocaleDateString('ru-RU'));
 					//qlik.currApp().variable.setContent($scope.layout.var_name, date.toLocaleDateString('ru-RU') );
 					qlik.currApp().variable.setContent('vDateMax', date.toLocaleDateString('ru-RU') );
+					console.log(date);
 				}
 
-				//document.getElementById("my_date").value="2017-09-14";
-				
-				$scope.changeDate(new Date(Date.now()-86400000));
+				// $scope.changeDate(new Date(Date.now()-86400000));
 				
 				// $("#my_date").parent().css({"height":"30px", "margin": "auto", "width" : "100%"}).parent().css({"display":"flex","height":"100%"}).parent().parent().parent().parent().parent().parent().css("height","60px");
-				$("#my_date").parent().css({"height":"30px", "margin": "auto", "width" : "100%"}).parent().css({"display":"flex","height":"100%"}).parent().parent().parent().parent().parent().css("height","60px");
+				// $(".date").parent().css({"height":"30px", "margin": "auto", "width" : "100%"}).parent().css({"display":"flex","height":"100%"}).parent().parent().parent().parent().parent().css("height","60px");
 				//$(.quick-navigation.ng-isolate-scope).css("visibility","hidden");
+				$(".picker").on("change", function() {
+					var date = $(this).val();
+					$(".date").val(date);
+					qlik.currApp().variable.setContent('vDateMax', date );
+					console.log(date);
+				});
             }]
         };
     } );

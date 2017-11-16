@@ -1,0 +1,36 @@
+﻿#my_date {
+	background-color: transparent;
+	width: 100%;
+	border-radius: 0px;
+	border: 1px solid #B3B3B3;
+		/* border: 1px solid #B3B3B3; */
+		/* display: inline-block; */
+		/* cursor: pointer; */
+		/* color: #595959; */
+		/* font-family: 'QlikView Sans'; */
+		/* font-size: 1.15384615em; */
+	font-family:'QlikView Sans';
+	font-size:15px;
+	padding: 2px 6px;
+		/* text-decoration: none; */
+		/* width: 97%; */
+		/* text-align: left; */
+	box-sizing: border-box;
+	}
+	
+#my_date:before {
+	content: "на дату ";
+	padding-right: 2px;
+	font-family:'QlikView Sans';
+	font-size: 15px;
+}
+	
+	#my_date:hover {
+		border-color: #595959;
+	}
+.quick-navigation.ng-isolate-scope {
+	display: none;
+}
+#grid-wrap.sheet-list {
+	height: 100%;
+}
